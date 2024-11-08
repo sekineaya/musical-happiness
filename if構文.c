@@ -2,19 +2,24 @@
 
 int main()
 {
-    int a,b,plus;
+    int a,b;
     
     printf("乗る人数を入力してください>>>");
     scanf("%d",&a);
-    printf("追加で乗る人数を入力してください>>>");
+    printf("乗るスピードは何キロですか？>>>");
     scanf("%d",&b);
     
-    plus = a+b;
     
-    if(a+b>100)
+    if(a>100)
     {
         printf("イナバ物置は壊れてしまった。");
     }
+    
+    else if(b>=300)
+    {
+        printf("イナバ物置はへこんでしまった。");  
+    }
+
     
     else
     {
