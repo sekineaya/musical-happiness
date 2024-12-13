@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdbool.h>
+
+int main()
+{
+    bool is_valid_password(const char*password)
+    {
+        int length=strlen(password);
+        
+        if(length<8)
+        {
+            printf("パスワードは8文字威容である必要があります。\n");
+            
+            return false;
+            
+        }
+    
+    bool has_uuper=false;
+    bool has_lower=false;
+    bool has_digit=false;
+    
+    for(int i=0; i<length; i++)
+    {
+        if(isupper(password[i]))
+        {
+            has_uuper=true;
+        }
+        if(isupper(password[i]))
+        {
+            has_lower=true;
+        }
+        if(isupper(password[i]))
+        {
+            has_digit=true;
+        }
+    }
+    
+    if (!has_uuper || !has_lower)
+    {
+        printf("パスワードには大文字と小文字を両方含める必要があります。\n");
+        return false;
+    }
+    if (!has_digit)
+    {
+        printf("パスワードには少なくとも一つの数字を含める必要があります。\n");
+        return false;
+    }
+    
+    
+    
+    
+    
+
+    return true;
+    }
+}
+void change_password()
+{
+    char new_password[100];
+    int attempt_count=0;
+    
+    while(attempt_count<5)
+    {
+        printf("パスワードを入力してください。\n");
+        if (fgets(new_password, sizeof(new_password,stdin))
+        {
+            size_t len=strlen(new_password);
+            {
+                new_password[len-1]=='\0';
+            }
+        }
+        if(is_valid_password(new_password))
+        {
+            printf("パスワードが正常に変更されました。\n");
+            return false;
+            
+        }
+        else
+        {
+            printf("パスワードの変更に失敗しました。再試行してください。\n");
+        }
+    }
+        attempt_count++;
+    
+}
+    printf("最大試行回数を超えました。プログラムを終了します。\n");
+}
+int main()
+{
+    change_password();
+    return 0;
+}
