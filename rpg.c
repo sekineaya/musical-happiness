@@ -7,26 +7,32 @@ int main()
     srand(time(0));
     
     int intelligence = (rand()%20) + 1;
-    int stamina      = (rand()%20-intelligence) + 1;
-    int charisma     = (rand()%20-intelligence- stamina ) + 1;
+    int stamina      = (rand()%20-intelligence>0) + 1;
+    int charisma     = 20-intelligence-stamina;
     
-    printf("%d",intelligence);
-    printf("%d",stamina);
-    printf("%d",charisma); 
+    printf("intelligence:%d\n",intelligence);
+    printf("stamina:%d\n",stamina);
+    printf("charisma:%d\n",charisma);
+    
     
     if(intelligence>stamina&intelligence>charisma)
     {
         printf("mage");
     }
      
-    if(stamina>intelligence&stamina>charisma)
+    else if(stamina>intelligence&stamina>charisma)
     {
         printf("knight");
     }
     
-    if(charisma>stamina&charisma>intelligence)
+    else if(charisma>stamina&charisma>intelligence)
     {
         printf("thief");
+    }
+    
+    else
+    {
+        printf("masse");
     }
     
     return 0;
