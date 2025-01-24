@@ -8,7 +8,7 @@ int main()
     
     int intelligence = (rand()%20) + 1;
     int stamina      = (rand()%20-intelligence) + 1;
-    int charisma     = (rand()%20-intelligence- charisma ) + 1;
+    int charisma     = (rand()%20-intelligence- stamina ) + 1;
     
     printf("%d",intelligence);
     printf("%d",stamina);
